@@ -55,6 +55,18 @@ function setDisableComments(disable) {
   $('.commentSectionContent button').prop('disabled', disable);
   $('.commentSectionContent input').prop('disabled', disable);
   $('.commentSectionContent textarea').prop('disabled', disable);
+
+  if (disable) {
+    $('.commentSectionContent button').css('cursor', 'not-allowed');
+    $('.commentSectionContent button').prop('title', 'Accept cookie-usage to enable comments');
+    $('.commentSectionContent input').prop('title', 'Accept cookie-usage to enable comments');
+    $('.commentSectionContent textarea').prop('title', 'Accept cookie-usage to enable comments');
+  }else {
+    $('.commentSectionContent button').css('cursor', 'default');
+    $('.commentSectionContent button').prop('title', '');
+    $('.commentSectionContent input').prop('title', '');
+    $('.commentSectionContent textarea').prop('title', '');
+  }
 }
 
 //manage cookies
