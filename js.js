@@ -54,6 +54,7 @@ function validateForms() {
 function setDisableComments(disable) {
   $('.commentSectionContent button').prop('disabled', disable);
   $('.commentSectionContent input').prop('disabled', disable);
+  $('.commentSectionContent textarea').prop('disabled', disable);
 }
 
 //manage cookies

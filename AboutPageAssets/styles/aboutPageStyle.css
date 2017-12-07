@@ -359,6 +359,7 @@ footer .footerNote span {
 
 textarea {
    resize: none;
+	 font-family: sans-serif;
 }
 
 /* Media query for Mobile devices*/
