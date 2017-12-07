@@ -200,7 +200,7 @@ header .socialNetworkNavBar .socialNetworkNav img:hover {
 
 }
 
-.contactData .sectionTitle, .section2 .sectionTitle {
+.contactData .sectionTitle, .commentSection .sectionTitle {
 
 	font-family: 'Montserrat', sans-serif;
 
@@ -214,7 +214,7 @@ header .socialNetworkNavBar .socialNetworkNav img:hover {
 
 }
 
-.contactData .sectionTitleRule, .section2 .sectionTitleRule {
+.contactData .sectionTitleRule, .commentSection .sectionTitleRule {
 
 	margin: 0 3% 0 0;
 
@@ -224,7 +224,7 @@ header .socialNetworkNavBar .socialNetworkNav img:hover {
 
 }
 
-.contactData .sectionTitleRule2, .section2 .sectionTitleRule2 {
+.contactData .sectionTitleRule2, .commentSection .sectionTitleRule2 {
 
 	background-color: rgba(208,207,207,1.00);
 
@@ -254,7 +254,7 @@ header .socialNetworkNavBar .socialNetworkNav img:hover {
 
 }
 
-.section2 .sectionContentTitle {
+.commentSection .sectionContentTitle {
 
 	font-family: sans-serif;
 
@@ -268,7 +268,7 @@ header .socialNetworkNavBar .socialNetworkNav img:hover {
 
 
 
-.section2 .sectionContentSubTitle {
+.commentSection .sectionContentSubTitle {
 
 	font-family: sans-serif;
 
@@ -280,7 +280,7 @@ header .socialNetworkNavBar .socialNetworkNav img:hover {
 
 }
 
-.section2 .sectionContent {
+.commentSection .sectionContent {
 
 	font-family: sans-serif;
 
@@ -479,19 +479,19 @@ header .socialNetworkNavBar .socialNetworkNav {
 
 }
 
-.contactData .section1Title, .section2 .section1Title {
+.contactData .section1Title, .commentSection .section1Title {
 
 	text-align: center;
 
 }
 
-.contactData .sectionTitleRule, .section2 .sectionTitleRule {
+.contactData .sectionTitleRule, .commentSection .sectionTitleRule {
 
 	width: 100%;
 
 }
 
-.contactData .sectionTitleRule2, .section2 .sectionTitleRule2 {
+.contactData .sectionTitleRule2, .commentSection .sectionTitleRule2 {
 
 	display: none;
 
@@ -509,7 +509,7 @@ header .socialNetworkNavBar .socialNetworkNav {
 
 }
 
-.mainContent .section2 {
+.mainContent .commentSection {
 
 	display: block;
 
@@ -517,7 +517,7 @@ header .socialNetworkNavBar .socialNetworkNav {
 
 }
 
-.section2 .section2Content {
+.commentSection .commentSectionContent {
 
     margin-top: 10%;
 
@@ -615,19 +615,19 @@ header .socialNetworkNavBar .socialNetworkNav {
 
 /* Main content and sections */
 
-.contactData .section1Title, .section2 .section1Title {
+.contactData .section1Title, .commentSection .section1Title {
 
 	text-align: center;
 
 }
 
-.contactData .sectionTitleRule, .section2 .sectionTitleRule {
+.contactData .sectionTitleRule, .commentSection .sectionTitleRule {
 
 	width: 100%;
 
 }
 
-.contactData .sectionTitleRule2, .section2 .sectionTitleRule2 {
+.contactData .sectionTitleRule2, .commentSection .sectionTitleRule2 {
 
 	display: none;
 
@@ -647,13 +647,13 @@ header .socialNetworkNavBar .socialNetworkNav {
 
 }
 
-.mainContent .section2 {
+.mainContent .commentSection {
 
 	clear: both;
 
 }
 
-.section2 .section2Content {
+.commentSection .commentSectionContent {
 
 	padding: 0px;
 
@@ -765,7 +765,7 @@ header .socialNetworkNavBar .socialNetworkNav {
 
 /* Main content sections */
 
-.contactData .sectionTitleRule, .section2 .sectionTitleRule {
+.contactData .sectionTitleRule, .commentSection .sectionTitleRule {
 
 	width: 22.5%;
 
@@ -787,13 +787,13 @@ header .socialNetworkNavBar .socialNetworkNav {
 
 }
 
-.mainContent .section2 {
+.mainContent .commentSection {
 
 	clear: both;
 
 }
 
-.section2 .section2Content {
+.commentSection .commentSectionContent {
 
 	padding: 0px;
 
@@ -802,6 +802,35 @@ header .socialNetworkNavBar .socialNetworkNav {
 	font-family: sans-serif;
 
 }
+
+.commentSection ol {
+
+	padding-left: 0px;
+}
+
+.commentSection ol li {
+	margin-left: 26%;
+
+	list-style-type: none;
+
+	width: inherit;
+}
+
+.commentSection ol li .comment {
+	font-family: sans-serif;
+}
+
+.commentSection ol li .comment footer {
+	padding-left: 70%;
+	display: block;
+}
+
+.commentSection ol li .comment .entry-content {
+	display: block;
+}
+
+
+
 
 .mainContent .externalResourcesNav {
 
