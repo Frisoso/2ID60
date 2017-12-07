@@ -5,53 +5,84 @@ $( ".socialNetworkNav" ).hide().fadeIn(2000);
 displayComments();
 
 function submitComment() {
+  if (!validateForms()) {
+    return;
+  }
   var uname = $( "#uname" ).val();
+  $( "#uname" ).val("");
   var ctext = $( "#ctext" ).val();
+  $( "#ctext" ).val("");
 
   var d = new Date();
   var cdate = d.toUTCString();
 
   var curComments = getCookie("comments");
-  newComments = curComments + uname + "|" + ctext + "|" + cdate + ";"
-
-  console.log(newComments);
+  newComments = curComments + uname + "|" + ctext + "|" + cdate + "z";
 
   setCookie("comments", newComments);
+
+  displayComments();
 }
 
 function displayComments() {
   var comments = getCookie("comments");
   if ( !comments ) {
-    comments = "Friso Buurman|Initial comment|Fri, 01 Dec 2017 11:57:03 GMT;"
+    comments = "Friso Buurman|Test comment|Fri, 01 Dec 2017 11:57:03 GMTz"
   }
 
   $( ".commentSection ol li" ).remove();
 
-  var commentsArray = comments.split(';');
+  var commentsArray = comments.split('z');
   for(var i = 0; i < commentsArray.length - 1; i++) {
     commentArray = commentsArray[i].split('|');
     $( ".commentSection ol" ).append("<li><article class=\"comment\"><div class=\"entry-content\"><p>" + commentArray[1] + "</p></div><footer class=\"post-info\"><abbr class=\"published\" title=\"" + commentArray[2] + "\">" + commentArray[2] + "</abbr><address class=\"vcard author\">By <a class=\"url fn\" href=\"#\">" + commentArray[0] + "</a></address></footer></article></li>");
   }
 }
 
+function validateForms() {
+  if ( !$( "#uname" ).val() || !$( "#ctext" ).val() ) {
+    alert("Zowel het 'Naam' als het 'Reactie' veld moeten ingevuld zijn!");
+    return false;
+  }else {
+    return true;
+  }
+}
+
+function setDisableComments(disable) {
+  $('.commentSectionContent button').prop('disabled', disable);
+  $('.commentSectionContent input').prop('disabled', disable);
+}
 
 //manage cookies
+setDisableComments(true);
 var cname = "useCookies";
 if ( getCookie(cname) ) {
   removeCookieBar();
+
+  if (getCookie(cname) == "true") {
+    setDisableComments(false);
+  }
+}else {
+  showCookieBar();
 }
 
 function removeCookieBar() {
   $( "#cookiebar" ).remove();
 }
 
+function showCookieBar() {
+  $( "#cookiebar" ).css('visibility', "visible");
+}
+
 function cookieYes() {
   setCookie(cname, "true", 31);
+  setDisableComments(false);
   removeCookieBar();
 }
 
 function cookieNo() {
   setCookie(cname, "false", 31);
+  setDisableComments(true);
   removeCookieBar();
 }
 

@@ -38,6 +38,8 @@ body {
 	background-color: rgba(146,146,146,1.00);
 
 	text-align: center;
+
+	visibility: none;
 }
 
 #cookiebar .cookieDisclaimer {
@@ -828,9 +830,6 @@ header .socialNetworkNavBar .socialNetworkNav {
 .commentSection ol li .comment .entry-content {
 	display: block;
 }
-
-
-
 
 .mainContent .externalResourcesNav {
 
