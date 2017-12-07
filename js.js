@@ -35,8 +35,11 @@ function displayComments() {
   var commentsArray = comments.split('z');
   for(var i = 0; i < commentsArray.length - 1; i++) {
     commentArray = commentsArray[i].split('|');
-    $( ".commentSection ol" ).append("<li><article class=\"comment\"><div class=\"entry-content\"><p>" + commentArray[1] + "</p></div><footer class=\"post-info\"><abbr class=\"published\" title=\"" + commentArray[2] + "\">" + commentArray[2] + "</abbr><address class=\"vcard author\">By <a class=\"url fn\" href=\"#\">" + commentArray[0] + "</a></address></footer></article></li>");
+    $( ".commentSection ol" ).append("<li><article class=\"comment\"><div class=\"entry-content\">" + commentArray[1] + "</div><footer class=\"post-info\"><abbr class=\"published\" title=\"" + commentArray[2] + "\">" + commentArray[2] + "</abbr><address class=\"vcard author\">Door: " + commentArray[0] + "</address></footer></article></li>");
   }
+
+  $( ".commentSection ol li:odd" ).css( "background-color", "#e9e9e9" );
+  $( ".commentSection ol li:even" ).css( "background-color", "#f6f6f6" );
 }
 
 function validateForms() {
@@ -81,8 +84,6 @@ function cookieYes() {
 }
 
 function cookieNo() {
-  setCookie(cname, "false", 31);
-  setDisableComments(true);
   removeCookieBar();
 }
 
